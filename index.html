@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planificador de Viaje</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planificador de Viaje - Estilo Moderno</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet para el mapa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Mi Planificador de Viaje</h1>
-    </header>
+  <header>
+    <h1>Planificador de Viaje</h1>
+    <p>Todos los destinos de tu aventura</p>
+  </header>
 
-    <main>
-        <section id="destinos">
-            <h2>Tabla de Destinos</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Ciudad</th>
-                        <th>Continente</th>
-                        <th>Días</th>
-                        <th>Transporte</th>
-                        <th>Coste (€)</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="tabla-destinos"></tbody>
-            </table>
-            <p id="coste-total"></p>
-        </section>
+  <section class="tabla-container">
+    <table id="tablaDestinos">
+      <thead>
+        <tr>
+          <th>Ciudad</th>
+          <th>Continente</th>
+          <th>País</th>
+          <th>Días</th>
+          <th>Transporte</th>
+          <th>Coste Transporte (€)</th>
+          <th>Alojamiento</th>
+          <th>Coste Día (€)</th>
+          <th>Lugares de interés</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Se llenará con JS -->
+      </tbody>
+    </table>
+  </section>
 
-        <section id="mapa">
-            <h2>Mapa de la Ruta</h2>
-            <div id="map" style="height: 500px;"></div>
-        </section>
-    </main>
+  <p id="totalCoste" class="total-coste">Coste total: 0 €</p>
 
-    <footer>
-        <p>Proyecto de 1º Bachillerato - Aplicación web de viaje</p>
-    </footer>
+  <section class="map-container">
+    <div id="map"></div>
+  </section>
 
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+<section class="map-container">
+  <div id="map"></div>
+</section>
